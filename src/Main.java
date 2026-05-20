@@ -66,6 +66,11 @@ public class Main {
         myContactsManager.addContact(contact5);
 
         //Affichage du numéro de téléphone correspondant au nom recherché
-        System.out.println("le numéro correspondant au contact recherché est :" + myContactsManager.searchContact("ALLANI").phoneNumber);
+        Contact ami = myContactsManager.searchContact("ALLANI");
+        if (ami != null) {
+            System.out.println("le numéro correspondant au contact recherché est :" + ami.phoneNumber);
+        } else {
+            System.out.println("Contact non trouvé.");
+        }
     }
 }
